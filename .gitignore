@@ -1,0 +1,82 @@
+# ======================================================
+# Go
+# ======================================================
+# Build artifacts
+/bin/
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+*.test
+*.out
+*.prof
+*.trace
+*.test
+*.test.exe
+
+# Go workspace
+go.work
+go.work.sum
+
+# Dependency directories (if using vendoring)
+vendor/
+
+# ======================================================
+# Environment & Secrets
+# ======================================================
+.env
+.env.*
+!.env.example
+*.local
+*.local.*
+config/local/
+
+# ======================================================
+# Docker (Postgres, MongoDB, RabbitMQ volumes)
+# ======================================================
+# Local Docker data volumes — keep container data out of git
+/data/
+.docker/
+docker-data/
+pgdata/
+mongodata/
+rabbitmq-data/
+
+# ======================================================
+# Logs & Runtime
+# ======================================================
+*.log
+logs/
+tmp/
+*.pid
+*.seed
+*.pid.lock
+nohup.out
+
+# ======================================================
+# IDE / Editor
+# ======================================================
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# ======================================================
+# Test & Coverage
+# ======================================================
+coverage/
+coverage.html
+coverage.out
+coverage.txt
+
+# ======================================================
+# Certificates / TLS (local dev)
+# ======================================================
+*.pem
+*.key
+*.crt
+!certs/.gitkeep

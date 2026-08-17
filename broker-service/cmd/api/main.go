@@ -11,13 +11,14 @@ const webPort = "8080"
 type Application struct{}
 
 func main() {
-	
+
 	app := Application{}
 
 	log.Printf("broker service is running on port: %s\n", webPort)
 
 	server := &http.Server{
-		Addr: fmt.Sprintf(":%s", webPort),
+		Addr:    fmt.Sprintf(":%s", webPort),
+		Handler: app.routes(),
 	}
 
 	err := server.ListenAndServe()
